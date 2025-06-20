@@ -73,17 +73,70 @@ class _SignInPageState extends State<SignInPage> {
                           borderRadius: BorderRadius.circular(32.0),
                         ),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            // >>> Text input for email:
+                            Text(
+                              "Email",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            SizedBox(height: 10.0),
                             Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
                                   width: 1.0,
                                   color: Colors.black38,
                                 ),
+                                borderRadius: BorderRadius.circular(16.0),
                               ),
                               child: TextField(
                                 decoration: InputDecoration(
                                   border: InputBorder.none,
+                                  // >>> When using the text field with prefix or suffix icons, we need to add the content padding to ensure the text input in the center of the text field:
+                                  contentPadding: EdgeInsets.symmetric(
+                                    vertical: 15,
+                                  ),
+                                  prefixIcon: Icon(
+                                    Icons.email_outlined,
+                                    color: Color(0xFF7F30FE),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 20.0),
+                            // >>> Text input for password:
+                            Text(
+                              "Password",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            SizedBox(height: 10.0),
+                            Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  width: 1.0,
+                                  color: Colors.black38,
+                                ),
+                                borderRadius: BorderRadius.circular(16.0),
+                              ),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  border: InputBorder.none,
+                                  // >>> When using the text field with prefix or suffix icons, we need to add the content padding to ensure the text input in the center of the text field:
+                                  contentPadding: EdgeInsets.symmetric(
+                                    vertical: 15,
+                                  ),
+                                  prefixIcon: Icon(
+                                    Icons.email_outlined,
+                                    color: Color(0xFF7F30FE),
+                                  ),
                                 ),
                               ),
                             ),
